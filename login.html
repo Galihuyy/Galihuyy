@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register Form</title>
+    <style>
+        .form-container {
+            display: none;
+        }
+
+        #login {
+            display: block;
+        }
+
+        .form-container, .form-header, .form-body, .form-group {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffff;
+            color: #ECF2F8;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #017143;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 400px;
+        }
+
+        .form-header {
+            background-color: #1B2B34;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-header h2 {
+            margin: 0;
+            color: #ECF2F8;
+        }
+
+        .form-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ECF2F8;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ECF2F8;
+            color: #1B2B34;
+            box-sizing: border-box;
+        }
+
+        .form-group input::placeholder {
+            color: #1B2B34;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1B2B34;
+            color: #ECF2F8;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container" id="login">
+        <div class="form-header">
+            <h2>Login</h2>
+        </div>
+        <div class="form-body">
+            <div class="form-group">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" placeholder="Masukkan username"  required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" placeholder="Masukkan password"  required>
+            </div>
+            <div class="form-group">
+                <a href="index.html"><button>Login</button></a>
+                <p align="center">Don't have an account? <span style="color: rgb(0, 255, 0); cursor: pointer;" onclick="toggleForms()">Register</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container" id="register">
+        <div class="form-header">
+            <h2>Register</h2>
+        </div>
+        <div class="form-body">
+            <div class="form-group">
+                <label for="registerUsername">Username</label>
+                <input type="text" id="registerUsername" placeholder="Masukkan username"  required>
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" placeholder="Maukkan email"  required>
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" placeholder="Masukkan password"  required>
+            </div>
+            <div class="form-group">
+                <a href="index.html"><button>Register</button></a>
+                <p align="center">Already have an account? <span style="color: rgb(56, 255, 56); cursor: pointer;" onclick="toggleForms()">Login</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            var loginForm = document.getElementById('login');
+            var registerForm = document.getElementById('register');
+
+            // Check if the login form is currently visible
+            if (loginForm.style.display !== 'none') {
+                loginForm.style.display = 'none';  // Hide login form
+                registerForm.style.display = 'block';  // Show register form
+            } else {
+                loginForm.style.display = 'block';  // Show login form
+                registerForm.style.display = 'none';  // Hide register form
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="asset/font-awesome/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Nosifer&family=Noto+Sans+KR:wght@800&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,900;1,100;1,400&family=Salsa&display=swap" rel="stylesheet">
+    <title>Basic Mission - Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/asset/image/starbucks-logo.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/asset/image/starbucks-logo.png" alt="logo" width="80px">
+            <div class="judul">
+                <h1>SETARBRUK</h1>
+                <p align="center">- COFFEE - </p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>/</li>
+                <li><a href="#">Descripton</a></li>
+                <li>/</li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="button">
+        <li><a href="login.html">Login</a></li>
+        </div>
+        
+        <div class="menu"><i class="fa-solid fa-bars" onclick="menu();" cursor="pointer"></i></div>
+    </header>
+    <div class="dropdown-menu">
+        
+            <li><a href="#"><i data-feather="home" width="16px"></i>Home</a></li>
+            <li><a href="#"><i data-feather="edit-2" width="16px"></i>Descripton</a></li>
+            <li><a href="#"><i data-feather="phone" width="16px"></i>Contact</a></li>
+            <hr>
+            <li><a href="login.html"><i data-feather="user" width="16px" padding="0"></i>login</a></li>
+        
+    </div>
+    <div class="landing-page">
+        <div class="circle"></div>
+        <div class="deskripsi-col">
+            <h2>ini bukan hanya kopi <br> ini <span>Setarbruk</span></h2>
+            <p>Nikmati harmoni rasa yang unik dengan setiap tegukan Matcha Green Tea Cream Frappuccino di Starbucks. Minuman yang segar dan menyegarkan ini adalah perpaduan yang sempurna antara kemurnian matcha, teh hijau Jepang yang dikenal akan cita rasanya yang khas, dan kelembutan susu yang membuatnya begitu lezat.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="image">
+            <img src="/asset/image/starbuck-menu.png" alt="">
+        </div>
+
+        <ul class="sci">
+            <li><a href="#"><i data-feather="twitter"></i></a></li>
+            <li><a href="#"><i data-feather="instagram"></i></a></li>
+            <li><a href="#"><i data-feather="facebook"></i></a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="item item1">
+            <div class="icon">
+                <i data-feather="map-pin" class="i"></i>
+            </div>
+            <div class="isi">
+                <p><b>ADRES</b></p>
+                <p>Ertuiqo Parte No.06</p>
+            </div>
+        </div>
+        <div class="item item2">
+            <div class="icon">
+                <i data-feather="phone" class="i"></i>
+            </div>
+            <div class="isi">
+                <p><b>TELEPONE</b></p>
+                <p>+62 8123477832</p>
+            </div>
+        </div>
+        <div class="item item3">
+            <div class="icon">
+                <i data-feather="mail" class="i"></i>
+            </div>
+            <div class="isi">
+                <p><b>E-MAIL</b></p>
+                <p>setarbruk@machine.bin</p>
+            </div>
+        </div>
+
+        <div class="item item4">
+            <p>SHOP</p>
+            <ul>
+                <li>Resto Querte</li>
+                <li>Urtuki Mall</li>
+                <li>Derte polistio</li>
+            </ul>
+        </div>
+        <div class="item item5">
+            <p>KLANTENDIENST</p>
+            <ul>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem</li>
+            </ul>
+        </div>
+        <div class="item item6">
+            <p>BEKIJE NOD</p>
+            <ul>
+                <li>Cupcake ipsum dolor</li>
+                <li>Cat ipsum</li>
+                <li>Artisan</li>
+            </ul>
+        </div>
+        <div class="item item7">
+            <p>MESIO DARKE</p>
+            <ul>
+                <li>Jangan lupa like dan subskrep gess, biar keren. terimakasih telah mengunjungi web ini, jangan lupa like dan subscribe dah, tapi itu gawajib, yg wajib itu ibadah!</li>
+                <li><button class="button-55" role="button">Webstore</button></li>
+            </ul>
+        </div>
+        <p class="item8" align="center">&copy; Galih Putra Pratama, 2024</p>
+        <a href="#" style="text-decoration: none; color: white; grid-column-start: 1; grid-column-end: 10;" align="center">
+            <i data-feather="twitter" width="14px"></i>
+            <i data-feather="facebook" width="14px"></i>
+            <i data-feather="instagram" width="14px"></i>
+        </a>
+
+        
+</footer>
+
+    <script type="text/javascript">
+
+        function menu() {
+        const menubtn = document.querySelector('.menu');
+        const menuicon = document.querySelector('.menu i');
+        const navmenu = document.querySelector('.dropdown-menu');
+        
+        menubtn.onclick = function() {
+            navmenu.classList.toggle('open')
+            const isOpen = navmenu.classList.contains('open')
+
+            menuicon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+        }
+
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 60);
+        })
+
+    </script>
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+</html>
