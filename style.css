@@ -179,6 +179,7 @@ header .button li a {
     font-weight: 500;
     letter-spacing: 1px;
     text-decoration: none;
+    mix-blend-mode: difference;
 }
 
 .landing-page .image {
